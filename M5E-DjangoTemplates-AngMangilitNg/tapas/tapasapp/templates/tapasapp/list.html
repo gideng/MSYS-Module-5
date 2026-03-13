@@ -1,8 +1,14 @@
 {% extends 'tapasapp/base.html' %}
 {% load static %}
 
-
-
+{% block sidebar %}
+<ul>
+    <li>View Wines</li>
+    <li>View Large Dishes</li>
+    <li>View Coursed Menus</li>
+</ul>
+{% endblock %}
+                
                 {% block content %}
                 <div class="col-12">
                     <table class="table table-striped">
