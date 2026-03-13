@@ -3,7 +3,7 @@
 
 {% block sidebar %}
 <ul>
-    <li>Back to main</li>
+    <li><a href="{% url 'view_menu' %}" style="color:black">Back to main</a></li>
 </ul>
 {% endblock %}
 
@@ -36,7 +36,7 @@
         </div>
 
         <div class="text-start py-4">
-            <button class="btn btn-secondarys">Add to Dishes</button>
+            <button class="btn btn-secondary">Add to dishes</button>
         </div>
 
     </div>
