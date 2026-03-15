@@ -1,0 +1,98 @@
+{% extends 'MyInventoryApp/base.html' %}
+{% load static %}
+
+{% block sidebar %}
+<ul>
+    <li><a href="{% url 'view_bottles' %}" style="color:black">View Water Bottles</a></li>
+    <li><a href="{% url 'view_supplier' %}" style="color:black">View Suppliers</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="card h-100 col-9">
+
+    <div class="card-header bg-light py-3">
+        <h3>Type in Bottle Details:</h3>
+    </div>
+
+    <div class="px-3">
+
+        <div class="row g-3 mt-1">
+            <div class="col-12 pb-3">
+                <label for="sku" class="form-label">SKU:</label>
+                <input type="text" id="sku" class="form-control">
+            </div>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-12 pb-3">
+                <label for="brand" class="form-label">Brand:</label>
+                <input type="text" id="brand" class="form-control">
+            </div>
+        </div>
+
+        <div class="row gx-5">
+            <div class="col-6">
+                <label for="cost" class="form-label">Cost:</label>
+                <input type="number" id="cost" class="form-control w-50">
+            </div>
+
+            <div class="col-6">
+                <label for="size" class="form-label">Size:</label>
+                <select id="size" class="form-control w-50">
+                    <option value="">Select bottle size</option>
+                    <option value="14oz">14oz</option>
+                    <option value="18oz">18oz</option>
+                    <option value="22oz">22oz</option>
+                    <option value="32oz">32oz</option>
+                    <option value="40oz">40oz</option>
+                    <option value="64oz">64oz</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row gx-5 py-3">
+            <div class="col-6">
+                <label for="color" class="form-label">Color:</label>
+                <input type="text" id="color" class="form-control w-50">
+            </div>
+
+            <div class="col-6">
+                <label for="mouthsize" class="form-label">Mouth Size:</label>
+                <select id="mouthsize" class="form-control w-50">
+                    <option value="">Select mouth size</option>
+                    <option value="small">Small</option>
+                    <option value="standard">Standard</option>
+                    <option value="Wide">Wide</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row gx-5 py-3">
+            <div class="col-6">
+                <label for="quantity" class="form-label">Quantity:</label>
+                <input type="number" id="quantity" class="form-control w-50">
+            </div>
+
+            <div class="col-6">
+                <label for="supplier" class="form-label">Supplier:</label>
+                <select id="supplier" class="form-control w-50">
+                    <option value="">Select a supplier</option>
+                    <option value="meister">Meister, Inc.</option>
+                    <option value="sailfish">Sailfish, Inc.</option>
+                    <option value="bucky">Bucky, Inc.</option>
+                    <option value="arjo">Arjo, Inc.</option>
+                    <option value="gokongwei">Gokongwei, Inc.</option>
+                    <option value="miko">Miko, Inc.</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="text-start py-4">
+            <button class="btn btn-secondary">Add to bottles</button>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
