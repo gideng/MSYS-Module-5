@@ -1,9 +1,6 @@
 from django.shortcuts import render
 from MyInventoryApp.models import Supplier, WaterBottle
 
-def view_base(request):
-    return render(request, 'MyInventoryApp/base.html')
-
 def view_suppliers(request):
     supplier_objects = Supplier.objects.all()
     return render(request, 'MyInventoryApp/view_suppliers.html', {'suppliers':supplier_objects})
